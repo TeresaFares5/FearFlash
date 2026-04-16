@@ -5381,6 +5381,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8671818393418226782, guid: b8f0a381b6e834641b18e2191bb12a61, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8671818393418226782, guid: b8f0a381b6e834641b18e2191bb12a61, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d162788ad3fec6140899a7cb8b5a39cd, type: 2}
@@ -9637,6 +9641,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.133
       objectReference: {fileID: 0}
+    - target: {fileID: 1974294822, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1974294828, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
       propertyPath: sliderCanvasGroup
       value: 
@@ -9645,6 +9653,10 @@ PrefabInstance:
       propertyPath: staminaProgressUI
       value: 
       objectReference: {fileID: 612646224}
+    - target: {fileID: 1974294833, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2577193924959650755, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9697,10 +9709,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonController
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1974294833, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8246774551678487560, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5735038017907863240}
   m_SourcePrefab: {fileID: 100100000, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
 --- !u!114 &5735038017907863232 stripped
 MonoBehaviour:
@@ -9713,6 +9729,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5493ad60f45e6949a92a2dbae0746dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &5735038017907863240
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974294813}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5781676177093504131
 GameObject:
   m_ObjectHideFlags: 0

@@ -19674,7 +19674,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a68295979fbc44f4fa888a6fb6cccb50, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.495
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -23887,10 +23887,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonController Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1974294833, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8246774551678487560, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1691648977}
   m_SourcePrefab: {fileID: 100100000, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
 --- !u!114 &1492933913 stripped
 MonoBehaviour:
@@ -23922,6 +23926,11 @@ MonoBehaviour:
 --- !u!20 &1492933916 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8246774550825936540, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
+  m_PrefabInstance: {fileID: 1492933912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1492933917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8246774551678487560, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
   m_PrefabInstance: {fileID: 1492933912}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1496562242
@@ -26255,12 +26264,35 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1974294828, guid: c99485e1875dd1d489f3399877b4d870, type: 3}
   m_PrefabInstance: {fileID: 1492933912}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1492933917}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5493ad60f45e6949a92a2dbae0746dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1691648977
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492933917}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1697330809
 GameObject:
   m_ObjectHideFlags: 0
