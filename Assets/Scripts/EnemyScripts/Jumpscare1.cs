@@ -21,7 +21,7 @@ public class Jumpscare1 : MonoBehaviour
         {
             zombieAnimator.SetBool("IsRunning", true); //Turns on Zombie's running animation
             screech.Play(); //plays screech sound
-            zombie.transform.position = Vector3.MoveTowards(transform.position, new Vector3(-15.6309996f, -15.1000004f, -15.5480003f), speed * Time.deltaTime); //moves zombie towards the target
+            zombie.transform.position = Vector3.MoveTowards(transform.position, new Vector3(-15.6309996f, -15.1000004f, -12.0480003f), speed * Time.deltaTime); //moves zombie towards the target
             StartCoroutine(TurnOffZombie(_zombietime)); //starts timer for blackscreen
             StartCoroutine(SwitchScene(_SceneChangetime)); //starts timer for scene change  
         }

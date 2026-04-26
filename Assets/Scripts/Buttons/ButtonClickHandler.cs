@@ -4,49 +4,56 @@ using UnityEngine.UI;
 public class ButtonClickHandler : MonoBehaviour
 {
     public AudioSource clickSound;
-    public GameObject Controlpanel;
+    public GameObject[] panels; // All panels in one list
+    public int panelIndex;      // Which panel THIS button controls
 
     private Button button;
-    private bool panelIsActive;
-
+    private static int currentPanelIndex = -1; // Shared across all buttons
 
     void Start()
     {
-        // Get reference to button component
         button = GetComponent<Button>();
-
-        // Attach click listener to button
         button.onClick.AddListener(OnClick);
 
-        // Set panel to inactive at the start
-        Controlpanel.SetActive(false);
-
-        // Set panelIsActive to false at the start
-        panelIsActive = false;
-
+        // Turn all panels off at start (only once)
+        if (currentPanelIndex == -1)
+        {
+            foreach (GameObject panel in panels)
+            {
+                panel.SetActive(false);
+            }
+        }
     }
 
     void Update()
     {
-        // Check if Escape key is pressed and panel is active
-        if (Input.GetKeyDown(KeyCode.Escape) && panelIsActive)
+        // Escape closes any open panel
+        if (Input.GetKeyDown(KeyCode.Escape) && currentPanelIndex != -1)
         {
-            // Deactivate panel
-            Controlpanel.SetActive(false);
-
-            // Set panelIsActive to false
-            panelIsActive = false;
+            panels[currentPanelIndex].SetActive(false);
+            currentPanelIndex = -1;
         }
     }
 
     public void OnClick()
     {
-        // Play click sound
         clickSound.Play();
+        Debug.Log("Opening panel: " + panels[panelIndex].name);
+        // If clicking the same panel → close it
+        if (currentPanelIndex == panelIndex)
+        {
+            panels[panelIndex].SetActive(false);
+            currentPanelIndex = -1;
+        }
+        else
+        {
+            // Close any open panel first
+            if (currentPanelIndex != -1)
+                panels[currentPanelIndex].SetActive(false);
 
-        panelIsActive = !panelIsActive;
-
-        // Activate or deactivate panel based on panelIsActive
-        Controlpanel.SetActive(panelIsActive);
+            // Open this button's panel
+            panels[panelIndex].SetActive(true);
+            currentPanelIndex = panelIndex;
+        }
     }
 }

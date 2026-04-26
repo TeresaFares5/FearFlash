@@ -23,5 +23,18 @@ public class LevelsButton : MonoBehaviour
         SceneManager.LoadScene("Level2");
     }
     
+    //loads cutscene
+    public void Cutscene()
+    {
+        SceneManager.LoadScene("Cutscene");
+    }
+
+    //quits game
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Quit");
+    }
+
 }
 
