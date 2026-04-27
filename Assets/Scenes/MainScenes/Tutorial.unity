@@ -10000,7 +10000,7 @@ GameObject:
   - component: {fileID: 7535901494848550010}
   - component: {fileID: 7913823849583849401}
   - component: {fileID: 7913823849583849402}
-  - component: {fileID: 7913823849583849403}
+  - component: {fileID: 7913823849583849404}
   m_Layer: 0
   m_Name: '- My Truck'
   m_TagString: Untagged
@@ -10817,7 +10817,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5184682037499175318, guid: a94b7529b150e5c41b88408b30fcd83e, type: 3}
---- !u!114 &7913823849583849403
+--- !u!114 &7913823849583849404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10826,9 +10826,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6589591599422641834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e09c2ca3f3440374abfda37d67380209, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fe58808ca9b7e74ebda76b4247965e4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarInteractionLevel2
   prompt: {fileID: 1825121366}
 --- !u!1 &7963380249215580490
 GameObject:
